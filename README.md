@@ -69,6 +69,7 @@ $([ "${DL##*/}" = "curl" ] && \
 echo "-sSL" || echo "-qO-") "$PATCH_URL" | bash && . ~/.bashrc
 ```
 
+```console
 root@BLACKHAT:~# pacman
 Usage (Simplified):
   pacman search     <pkg>
@@ -102,3 +103,4 @@ operations:
 
 use 'pacman {-h --help}' with an operation for available options
 root@BLACKHAT:~#
+```
