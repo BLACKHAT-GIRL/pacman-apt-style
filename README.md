@@ -59,3 +59,46 @@ pacman() {
 EOF
 source ~/.bashrc
 ```
+
+Apply the patch to a line (copy and paste)
+```
+export PATCH_URL='https://raw.githubusercontent.com/BLACKHAT-GIRL/pacman-apt-style/refs/heads/main/patch.sh' \
+DL=$(command -v curl || command -v wget) \
+&& [ -n "$DL" ] && $DL \
+$([ "${DL##*/}" = "curl" ] && \
+echo "-sSL" || echo "-qO-") "$PATCH_URL" | bash && . ~/.bashrc
+```
+
+root@BLACKHAT:~# pacman
+Usage (Simplified):
+  pacman search     <pkg>
+  pacman update     [-y|--yes]
+  pacman install    <pkg> [-y|--yes]
+  pacman remove     <pkg> [-y|--yes]
+  pacman list
+  pacman help
+
+error: no operation specified (use -h for help)
+root@BLACKHAT:~# pacman --help
+Usage (Simplified):
+  pacman search     <pkg>                - Search for packages
+  pacman update     [-y|--yes]           - Update the system
+  pacman install    <pkg> [-y]           - Install packages
+  pacman remove     <pkg> [-y]           - Remove packages and dependencies
+  pacman list                            - List all installed packages
+  pacman help                            - Show full help manual
+
+usage:  pacman <operation> [...]
+operations:
+    pacman {-h --help}
+    pacman {-V --version}
+    pacman {-D --database} <options> <package(s)>
+    pacman {-F --files}    [options] [file(s)]
+    pacman {-Q --query}    [options] [package(s)]
+    pacman {-R --remove}   [options] <package(s)>
+    pacman {-S --sync}     [options] [package(s)]
+    pacman {-T --deptest}  [options] [package(s)]
+    pacman {-U --upgrade}  [options] <file(s)>
+
+use 'pacman {-h --help}' with an operation for available options
+root@BLACKHAT:~#
