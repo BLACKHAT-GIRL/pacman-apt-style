@@ -61,7 +61,7 @@ source ~/.bashrc
 ```
 
 Apply the patch to a line (copy and paste)
-```
+```bash
 export PATCH_URL='https://raw.githubusercontent.com/BLACKHAT-GIRL/pacman-apt-style/refs/heads/main/patch.sh' \
 DL=$(command -v curl || command -v wget) \
 && [ -n "$DL" ] && $DL \
