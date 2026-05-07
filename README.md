@@ -1,7 +1,7 @@
 # pacman-apt-style
 Simple patch for pacman to facilitate apt-style operation using MSYS2
 
-```
+```bash
 grep -q "pacman() {" ~/.bashrc || cat << 'EOF' | expand -t 2 | tee -a ~/.bashrc
 pacman() {
   local ARGS=()
