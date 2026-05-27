@@ -16,6 +16,9 @@ This patch works on any system using **pacman** as the package manager, includin
 - BlackArch
 - MSYS2 (Windows)
 
+# How to install/apply
+
+Locally (copy and paste)
 ```bash
 grep -q "pacman() {" ~/.bashrc || cat << 'EOF' | expand -t 2 | tee -a ~/.bashrc
 pacman() {
@@ -75,7 +78,7 @@ EOF
 source ~/.bashrc
 ```
 
-Apply the patch to a line (copy and paste)
+Remotely (copy and paste)
 ```bash
 export PATCH_URL='https://raw.githubusercontent.com/BLACKHAT-GIRL/pacman-apt-style/refs/heads/main/patch.sh' \
 DL=$(command -v curl || command -v wget) \
