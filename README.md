@@ -1,6 +1,21 @@
 # pacman-apt-style
 Simple patch for pacman to facilitate apt-style operation using MSYS2
 
+This patch works on any system using **pacman** as the package manager, including:
+- Arch Linux
+- Manjaro
+- EndeavourOS
+- Garuda Linux
+- ArcoLinux
+- RebornOS
+- Parabola GNU/Linux-libre
+- Artix Linux
+- Hyperbola GNU/Linux-libre
+- KaOS
+- SteamOS 3
+- BlackArch
+- MSYS2 (Windows)
+
 ```bash
 grep -q "pacman() {" ~/.bashrc || cat << 'EOF' | expand -t 2 | tee -a ~/.bashrc
 pacman() {
